@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m251202_150512_create_user_table extends Migration
+class m251202_150512_create_users_table extends Migration
 {
     public function safeUp()
     {
@@ -27,7 +27,7 @@ class m251202_150512_create_user_table extends Migration
         // --- Create a Default Admin User ---
         // Username: admin
         // Password: password
-        $this->insert('{{%user}}', [
+        $this->insert('{{%users}}', [
             'username' => 'admin',
             'email' => 'admin@example.com',
             'password_hash' => Yii::$app->security->generatePasswordHash('password'),
@@ -41,6 +41,6 @@ class m251202_150512_create_user_table extends Migration
 
     public function safeDown()
     {
-        $this->dropTable('{{%user}}');
+        $this->dropTable('{{%users}}');
     }
 }
