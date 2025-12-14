@@ -125,7 +125,7 @@ class FormSubmission extends ActiveRecord
             // 5. Rollback on Error
             $transaction->rollBack();
             
-            // Log the error (optional)
+            // Log the error
             Yii::error($e->getMessage(), __METHOD__);
             
             $this->addError('id', $e->getMessage());
