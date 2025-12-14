@@ -26,7 +26,7 @@ use yii\web\IdentityInterface;
 class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
+    const STATUS_ACTIVE = 1;
 
     // Define Role Constants
     const ROLE_ADMIN = 'admin';
@@ -37,7 +37,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function tableName()
     {
-        return 'users';
+        return 'user';
     }
 
     public function behaviors()
